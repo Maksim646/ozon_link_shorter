@@ -1,4 +1,4 @@
-module github.com/your-username/ozon_link_shorter
+module github.com/Maksim646/ozon_link_shorter
 
 go 1.23.2
 
