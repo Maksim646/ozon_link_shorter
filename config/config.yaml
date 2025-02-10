@@ -1,5 +1,7 @@
 env: "local"
-storage_path: ".storage/link.db"
+data: "postgresql"
+postgres_uri: "postgres://postgres:space@localhost:5447/space_vpx_satellite_db?sslmode=disable"
+migration_dir: "../../internal/database/postgresql/migrations"
 grpc:
   port: 44044
   timeout: 10h

@@ -1,10 +1,11 @@
-package grpc
+package grpc_app
 
 import (
 	"fmt"
 	"log/slog"
 	"net"
 
+	"github.com/Maksim646/ozon_link_shorter/internal/app"
 	linkGrpc "github.com/Maksim646/ozon_link_shorter/internal/grpc/link"
 	"google.golang.org/grpc"
 )
@@ -15,7 +16,7 @@ type App struct {
 	port       int
 }
 
-func New(log *slog.Logger, port int) *App {
+func New(log *slog.Logger, port int, usecases app.Usecases) *App {
 	gRPCServer := grpc.NewServer()
 
 	linkGrpc.Register(gRPCServer)
